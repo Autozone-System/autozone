@@ -1,0 +1,19 @@
+{
+  "name": "autozone",
+  "version": "1.0.0",
+  "description": "Car Dealership Inventory Management System",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite dev",
+    "build": "vite build"
+  },
+  "author": "Joel Henry <joel.henry.023@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "django-vite-plugin": "^4.0.0"
+  },
+  "devDependencies": {
+    "sass": "^1.71.1"
+  }
+}

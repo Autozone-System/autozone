@@ -1,0 +1,22 @@
+{% load vite %}
+{% load unicorn %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Add your meta description here." />
+    <meta name="keywords" content="Add your meta keywords here." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {% block title %}{{ title }}{% endblock %}
+    </title>
+    {% vite %}
+    {% include "../includes/styles.html" %}
+    {% include "../includes/pre_scripts.html" %}
+  </head>
+  <body>
+    {% csrf_token %}
+    {% block body %}{% endblock %}
+    {% include "../includes/scripts.html" %}
+  </body>
+</html>
