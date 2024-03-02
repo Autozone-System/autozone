@@ -17,14 +17,14 @@ class Model(models.Model):
     name = models.CharField(max_length=50)
     make = models.ForeignKey('common.Make', on_delete=models.CASCADE)
     
-    vehicles = models.ManyToOneRel('common.Vehicle', related_name='model', to='common.Vehicle', field_name='model')
+    units = models.ManyToOneRel('common.Unit', related_name='model', to='common.Unit', field_name='model')
     
     
     def __str__(self) -> str:
         return f"{self.make.name} {self.name}"
          
 
-class Vehicle(models.Model):
+class Unit(models.Model):
   
   BODY_TYPES = (
     ('sedan', 'Sedan'),
